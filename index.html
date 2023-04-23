@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teaches basic but critical skills for web design">
+    <meta name="keywords" content="web technologies, web design, web skills">
+    <meta name="author" content="Iam Guohong Zhang">
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <script src="./js/main.js"></script>
+    <title>ISYS3004 | Home</title>
+    <style>
+        .title-box {
+            max-width: 1100px;
+            position: absolute;
+            top: 0px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: auto;
+            height: 145px;
+            font-size: 19px;
+            color: #fffaf2;
+        }
+
+        .pull-down-box {
+            width: 100%;
+            height: 5vw;
+            position: absolute;
+            bottom: 3vw;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            animation: move 1.5s infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0.5vw);
+            }
+
+            75% {
+                transform: translateY(0vw);
+            }
+
+            100% {
+                transform: translateY(0.5vw);
+            }
+        }
+
+        .Instrgamimg {
+            width: 34px;
+            height: 35px;
+            background-image: url(./img/Sprite-diagram.png);
+            background-repeat: no-repeat;
+            background-size: 800% 800%;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 10px;
+            background-position-x: -129px;
+            background-position-y: -5px;
+            position: relative;
+            top: 10px;
+        }
+
+        .Facebookimg {
+            width: 34px;
+            height: 35px;
+            background-image: url(./img/Sprite-diagram.png);
+            background-repeat: no-repeat;
+            background-size: 800% 800%;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 10px;
+            background-position-x: -2px;
+            background-position-y: -5px;
+            position: relative;
+            top: 10px;
+        }
+
+        .arrowhead {
+            width: 6vw;
+            height: 4vw;
+            background-image: url(./img/Sprite-diagram.png);
+            background-repeat: no-repeat;
+            background-size: 460% 492%;
+            background-position-x: -5.5vw;
+            background-position-y: -12.5vw;
+            margin: 0 auto;
+        }
+
+        .pull-down-p {
+            line-height: 0vw;
+            font-size: 1.2vw;
+            font-weight: bold;
+            color: rgb(255 255 255 / 61%);
+            margin-top: 0px;
+            cursor: default;
+        }
+
+        .inner-content-box {
+            width: 55vw;
+            height: 46vw;
+            display: inline-block;
+            position: absolute;
+            padding: 2vw;
+        }
+
+        .inner-content-img-box {
+            width: 30vw;
+            height: 40vw;
+            background-image: url(./img/R-C.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            float: right;
+            display: inline-block;
+        }
+
+        .inner-content-hr {
+            width: 20vw;
+            float: left;
+            border: 0.5vw solid black;
+            border-radius: 10px;
+        }
+
+        .contact-link-inner {
+            width: 25vw;
+            height: 4vw;
+            margin-top: -2vw;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+        }
+
+        .contact-link-inner li a {
+            width: 4vw;
+            height: 4vw;
+            background-image: url(./img/Sprite-diagram.png);
+            background-repeat: no-repeat;
+            background-size: 700% 700%;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .contact-link-inner li:nth-child(1) a {
+            background-position-x: 0vw;
+            background-position-y: -0vw;
+        }
+
+        .contact-link-inner li:nth-child(2) a {
+            background-position-x: -13.8vw;
+            background-position-y: -0vw;
+        }
+
+        .contact-link-inner li:nth-child(3) a {
+            background-position-x: -18.4vw;
+            background-position-y: -0vw;
+        }
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <div class="contact-backgrond-img">
+        <header style="background-color: rgba(255,255,255,0.3);box-shadow: none;">
+            <div class="inner box-margin-center">
+                <a id="universitylogo" href="https://oasis.curtin.edu.au/" target="_blank">
+                    <div class="main-logo" title="Curtin University"></div>
+                </a>
+            </div>
+            <nav id="navigation">
+                <div class="nav-inner box-margin-center">
+                    <ul>
+                        <li> <a style="color: rgb(77, 74, 243);" href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./reflection.html">Reflection</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="title-box not-optional">
+            <p style="font-family: initial;font-style: oblique;font-size: 4vw;line-height: 4px;">Hey,I'm</p>
+            <p style="font-weight: bold;font-size: 6vw;line-height: 0px;">GUOHONG ZHANG</p>
+
+        </div>
+        <div class="pull-down-box not-optional">
+            <div class="arrowhead"></div>
+            <p class="pull-down-p">Pull Down</p>
+        </div>
+    </div>
+    <div class="contentbox">
+        <div class="inner box-margin-center">
+            <div class="inner-content-box">
+                <hr class="inner-content-hr">
+                <br>
+                <p style="font-size: 4vw;font-weight: bold;">I'M GUOHONG ZHANG A <br>WEB DEVELOPER</p>
+                <p style="font-size: 2vw;">Hey, I’m Guohong Zhang, a Business Information Technology student from
+                    Curtin, Australia. In
+                    the future, I hope to pursue a career in business analysis and data analyst.</p>
+                <p style="font-weight: bold;font-size: 2vw;">Follow me</p>
+                <div class="contact-link-inner">
+                    <ul>
+                        <li title="Facebook"><a href="https://www.facebook.com/profile.php?id=100046646233996"
+                                target="_blank"></a></li>
+                        <li title="Instrgam"><a href="https://www.instagram.com/zhangguohong7344/" target="_blank"></a>
+                        </li>
+                        <li title="Tiktok"><a
+                                href="https://www.douyin.com/search/hong14668?publish_time=0&sort_type=0&source=switch_tab&type=general"
+                                target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="inner-content-img-box"></div>
+        </div>
+        <div style="text-align: center;">
+            <p>This work is licensed under a</p>
+            <p>Creative Commons Attribtion 4.0 International License</p>
+        </div>
+    </div>
+    <footer>
+        <div class="inner box-margin-center">
+            <div class="inner-left fl">
+                <div class="artwork-information">
+                    <p>zhangguohong364@gmail.com</p>
+                    <p>Last modified: 4/23/2023</p>
+                    <p>This work is licensed under a</p>
+                    <p>Creative Commons Attribtion 4.0 International License</p>
+                </div>
+                <div class="contact">Contact us</div>
+                <div class="contact-link">
+                    <ul>
+                        <li title="Facebook"><a href="https://www.facebook.com/profile.php?id=100046646233996"
+                                target="_blank"></a></li>
+                        <li title="Instrgam"> <a href="https://www.instagram.com/zhangguohong7344/" target="_blank"></a>
+                        </li>
+                        <li title="Tiktok"><a
+                                href="https://www.douyin.com/search/hong14668?publish_time=0&sort_type=0&source=switch_tab&type=general"
+                                target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="inner-right fr">
+                <div class="contact-logo">
+                    <ul>
+                        <li title="Curtin University"><a href="https://oasis.curtin.edu.au/" target="_blank"></a></li>
+                        <li title="Github"><a href="https://github.com" target="_blank"></a></li>
+                        <li title="Animate.css"><a href="https://animate.style/" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+</html>

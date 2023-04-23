@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teaches basic but critical skills for web design">
+    <meta name="keywords" content="web technologies, web design, web skills">
+    <meta name="author" content="Iam Guohong Zhang">
+    <title>ISYS3004 | Contact</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <script src="./js/main.js"></script>
+    <style>
+        .contantbox {
+            width: 100%;
+            height: auto;
+        }
+
+        .contantbox .inner {
+            width: 75vw;
+            height: auto;
+        }
+
+        .contact-backgrond-img {
+            width: 100%;
+            height: 1150px;
+            background-image: url(./img/aboutbg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .pull-down-box {
+            width: 100%;
+            height: 5vw;
+            position: absolute;
+            bottom: 3vw;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            animation: move 1.5s infinite;
+        }
+
+        .arrowhead {
+            width: 6vw;
+            height: 4vw;
+            background-image: url(./img/Sprite-diagram.png);
+            background-repeat: no-repeat;
+            background-size: 460% 492%;
+            background-position-x: -5.5vw;
+            background-position-y: -12.5vw;
+            margin: 0 auto;
+        }
+
+        .pull-down-p {
+            line-height: 0vw;
+            font-size: 1.2vw;
+            font-weight: bold;
+            color: rgb(255 255 255 / 61%);
+            margin-top: 0px;
+            cursor: default;
+        }
+
+        @media only screen and (max-width: 750px) {
+            .contact-backgrond-img {
+                height: 175vw !important;
+            }
+
+            .pull-down-box {
+                bottom: 10vw !important;
+            }
+
+            .arrowhead {
+                width: 13vw !important;
+                height: 7vw !important;
+                background-size: 477% 532% !important;
+                background-position-x: -12vw !important;
+                background-position-y: -23.5vw !important;
+            }
+
+            .pull-down-p {
+                font-size: 2.2vw !important;
+                margin-top: 6px !important;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0.5vw);
+            }
+
+            75% {
+                transform: translateY(0vw);
+            }
+
+            100% {
+                transform: translateY(0.5vw);
+            }
+        }
+
+        .header-left-box {
+            width: 400px;
+            height: 200px;
+            float: left;
+            margin-top: 250px;
+        }
+
+        .header-right-box {
+            width: 700px;
+            height: 560px;
+            float: right;
+            margin-top: 100px;
+        }
+
+        .header-main-box {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-left-box-hr {
+            border: 4px solid white;
+            border-radius: 50px;
+            width: 150px;
+            float: left;
+        }
+
+        .header-left-title {
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            line-height: 0px;
+        }
+
+        .header-left-p {
+            color: white;
+            font-size: 25px;
+        }
+
+        .header-right-title {
+            color: white;
+            font-size: 25px;
+            position: relative;
+            top: -5px;
+
+        }
+
+        .header-right-num {
+            font-size: 40px;
+            color: white;
+        }
+
+        .header-right-time {
+            color: white;
+            font-size: 20px;
+            margin-left: 25px;
+        }
+
+        .inner-about-content {
+            width: 100%;
+            height: 35vw;
+            box-shadow: 1px 2px 10px black;
+            margin-bottom: 3vw;
+        }
+
+        .inner-about-content-img {
+            width: 60%;
+            height: 100%;
+            float: left;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            box-shadow: 1px 2px 10px black;
+        }
+
+        .inner-about-content-img:nth-child(1) {
+            background-image: url(./img/drone.jpg);
+        }
+
+        .inner-about-content-img:nth-child(2) {
+            background-image: url(./img/car.jpg);
+            background-size: 125% 100%;
+            background-position-x: -7vw;
+        }
+
+        .inner-about-content-box {
+            width: 34%;
+            height: 87%;
+            float: left;
+            background-color: #f9f3ed;
+            padding: 3%;
+        }
+
+        .inner-about-content-title {
+            font-size: 2.2vw;
+            margin-top: 9vw;
+            font-weight: bold;
+            margin-bottom: 1vw;
+        }
+
+        .inner-about-content-p {
+            font-size: 1.3vw;
+        }
+
+        .inner-about-content:last-child {
+            margin-bottom: 10vw;
+        }
+
+        .header-right-time-span {
+            margin-left: 40px;
+        }
+
+        .header-right-hr {
+            margin-top: 25px;
+            border-radius: 15px;
+        }
+
+        @media only screen and (max-width: 1300px) {
+            .header-right-hr {
+                margin-top: 4vw;
+            }
+
+            .header-left-box-hr {
+                width: 25vw;
+            }
+
+            .header-left-title {
+                font-size: 5vw;
+            }
+
+            .header-left-p {
+                font-size: 3vw;
+            }
+
+            .contact-backgrond-img {
+                height: 148vw
+            }
+
+            .header-right-num {
+                font-size: 4vw;
+            }
+
+            .header-right-title {
+                font-size: 2.5vw;
+                top: -0.5vw;
+            }
+
+            .header-right-time {
+                font-size: 2.3vw;
+            }
+
+            .header-right-title-p {
+                margin-bottom: 4vw;
+            }
+
+            .header-right-time-span {
+                margin-left: 4.5vw;
+            }
+
+            .header-left-box {
+                float: none;
+                margin: 0 auto;
+                margin: 9vw auto 0vw auto;
+                width: 80%;
+                height: 26vw;
+            }
+
+            .header-right-box {
+                float: none;
+                margin: 0 auto;
+                width: 80%;
+            }
+
+        }
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <div class="contact-backgrond-img">
+        <header style="background-color: rgba(255,255,255,0.3);box-shadow: none;">
+            <div class="inner box-margin-center">
+                <a id="universitylogo" href="https://oasis.curtin.edu.au/" target="_blank">
+                    <div class="main-logo" title="Curtin University"></div>
+                </a>
+            </div>
+            <nav id="navigation">
+                <div class="nav-inner box-margin-center">
+                    <ul>
+                        <li> <a href="./index.html">Home</a></li>
+                        <li><a style="color: rgb(77, 74, 243);" href="./about.html">About</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./reflection.html">Reflection</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+        <div class="header-main-box">
+            <div class="header-left-box">
+                <hr class="header-left-box-hr">
+                <br>
+                <p class="header-left-title">ABOUT ME</p>
+                <p class="header-left-p">About my education,<br> work experience and interest</p>
+            </div>
+            <div class="header-right-box">
+                <span class="header-right-num">01</span>
+                <span class="header-right-title">Education Experience</span>
+                <p class="header-right-time">2020.02 ~ now:<span class="header-right-time-span">Curtin University
+                        (Business Information Technology)</span></p>
+                <p class="header-right-time">2018.09 ~ 2019.12: University of New South Wales (Foundation Course)
+                </p>
+                <hr class="header-right-hr" style="margin-top: 10px;">
+                <span class="header-right-num">02</span>
+                <span class="header-right-title">Work Experience</span>
+                <p class="header-right-time header-right-title-p">Bank Of China:</p>
+                <p style="position: relative;top: -15px;" class="header-right-time">&nbsp;&nbsp;&nbsp;&nbsp;Progress
+                    statistics table for process discussion and delivery plan according to the progress of Chinese
+                    New Year Savings performance update;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;According to the customer's intranet data, the internal financial
+                    budget of the branch is reported and summarized every month
+                </p>
+                <p class="header-right-time header-right-title-p">Bank Of Dongguan:</p>
+                <p style="position: relative;top: -15px;" class="header-right-time">&nbsp;&nbsp;&nbsp;&nbsp;Responsible
+                    for preparing and drafting general meetings of shareholders, board of directors and board of
+                    supervisors meetings and preparing relevant documents, keeping relevant documents, records and
+                    resolutions, etc.</p>
+                <hr class="header-right-hr" style="margin-top: 10px;">
+                <span class="header-right-num">03</span>
+                <span class="header-right-title">Skill</span>
+                <p class="header-right-time">1. professional skill：junior Accountant Qualification Certificate
+                    Aircraft Owners and Pilots Association of China
+                </p>
+                <p class="header-right-time">2. language skill：IELTS 6 points
+                </p>
+            </div>
+        </div>
+        <div class="pull-down-box not-optional">
+            <div class="arrowhead"></div>
+            <p class="pull-down-p">Pull Down</p>
+        </div>
+    </div>
+    <div class="contantbox">
+        <div class="inner box-margin-center">
+            <div style="margin-top: 2vw;">
+                <hr style="border: 0.3vw solid black;width: 13vw;position: relative;top: 1vw;"
+                    class="header-left-box-hr"><br>
+                <p style="font-size: 2.5vw;color: black;font-weight: bold;">MY<br> INTEREST</p>
+            </div>
+            <div class="inner-about-content">
+                <div class="inner-about-content-img"></div>
+                <div class="inner-about-content-box">
+                    <p class="inner-about-content-title">Camera Drones:</p>
+                    <p class="inner-about-content-p">Use drones to record beautiful moments when traveling and discover
+                        beautiful scenery from different perspectives</p>
+                </div>
+            </div>
+            <div class="inner-about-content">
+                <div class="inner-about-content-box">
+                    <p class="inner-about-content-title">Car:</p>
+                    <p class="inner-about-content-p">Served as the president of a car club in China and held multiple
+                        gatherings with over 300 people</p>
+                </div>
+                <div class="inner-about-content-img"></div>
+            </div>
+            <div class="inner-about-content">
+                <div style="background-image: url(./img/tourism.jpg);" class="inner-about-content-img"></div>
+                <div class="inner-about-content-box">
+                    <p class="inner-about-content-title">Travel:</p>
+                    <p class="inner-about-content-p">Traveling is a process that allows me to completely relax, taste
+                        different food and experience different cultures</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="inner box-margin-center">
+            <div class="inner-left fl">
+                <div class="artwork-information">
+                    <p>zhangguohong364@gmail.com</p>
+                    <p>Last modified: 4/23/2023</p>
+                    <p>This work is licensed under a</p>
+                    <p>Creative Commons Attribtion 4.0 International License</p>
+                </div>
+                <div class="contact">Contact us</div>
+                <div class="contact-link">
+                    <ul>
+                        <li title="Facebook"><a href="https://www.facebook.com/profile.php?id=100046646233996"
+                            target="_blank"></a></li>
+                    <li title="Instrgam"> <a href="https://www.instagram.com/zhangguohong7344/" target="_blank"></a>
+                    </li>
+                    <li title="Tiktok"><a
+                            href="https://www.douyin.com/search/hong14668?publish_time=0&sort_type=0&source=switch_tab&type=general"
+                            target="_blank"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="inner-right fr">
+                <div class="contact-logo">
+                    <ul>
+                        <li title="Curtin University"><a href="https://oasis.curtin.edu.au/" target="_blank"></a></li>
+                        <li title="Github"><a href="https://github.com" target="_blank"></a></li>
+                        <li title="Animate.css"><a href="https://animate.style/" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

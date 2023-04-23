@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teaches basic but critical skills for web design">
+    <meta name="keywords" content="web technologies, web design, web skills">
+    <meta name="author" content="Iam Guohong Zhang">
+    <title>ISYS3004 | Contact</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <script src="./js/main.js"></script>
+    <style>
+        .contantbox {
+            width: 100%;
+            height: auto;
+        }
+
+        .contantbox .inner {
+            width: 100%;
+            min-width: 245px;
+            height: auto;
+            padding-top: 50px;
+            overflow: hidden;
+        }
+
+        .contantbox .inner .title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            animation: moveandshow 1.5s forwards;
+        }
+
+        @keyframes moveandshow {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        .projects-show-box-computer {
+            width: 100%;
+            height: 750px;
+            position: relative;
+            animation: moveandshow 2s forwards;
+        }
+
+        .projects-show-title-box {
+            width: 300px;
+            height: 85%;
+            background: linear-gradient(to right, rgb(77, 74, 243), #f3f3f377);
+            border-top-right-radius: 225px;
+            border-bottom-right-radius: 225px;
+            position: relative;
+            z-index: 50;
+        }
+
+        .projects-show-title-box-title {
+            width: 89%;
+            height: 100px;
+            font-size: 34px;
+            float: right;
+            margin-top: 24px;
+            position: relative;
+            left: 35px;
+        }
+
+        .return-arrow-circle {
+            width: 55px;
+            height: 55px;
+            border: 4px solid #3c3c3c;
+            position: relative;
+            top: 400px;
+            left: -160px;
+            border-radius: 50px;
+            cursor: pointer;
+            display: none;
+            float: left;
+
+            z-index: 60;
+        }
+
+        .return-arrow-circle p {
+            font-size: 37px;
+            position: relative;
+            top: -35px;
+            left: 11px;
+            color: #444444;
+        }
+
+        .decorative-strips {
+            width: 30px;
+            height: 10px;
+            background-color: blue;
+            border-radius: 25px;
+            margin: 0 auto;
+        }
+
+        .projects-show-inner-box {
+            max-width: 1980px;
+            height: 85%;
+            margin-top: 160px;
+            overflow: hidden;
+            word-break: keep-all;
+            position: absolute;
+            left: -5%;
+            z-index: -1;
+        }
+
+        .projects-show-inner-box li {
+            min-width: 100px;
+            height: 350px;
+            margin-left: 20px;
+            white-space: nowrap;
+            cursor: pointer;
+            float: left;
+        }
+
+        .projects-show-inner-box li p {
+            writing-mode: vertical-rl;
+            line-height: 44px;
+            margin-top: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .projects-show-box-content-img {
+            width: 50%;
+            height: 350px;
+            background-image: url(./img/hero.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            float: left;
+            margin-top: 5%;
+
+        }
+
+        .projects-show-box-content-introduce {
+            width: 45%;
+            height: 70%;
+            float: right;
+        }
+
+        .projects-show-box-content-p {
+            text-align: center;
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: bold;
+        }
+
+        .projects-show-inner-box-ctrl {
+            width: 4000px;
+        }
+
+        .projects-show-inner-box-ctrl ul {
+            position: relative;
+            left: 0;
+        }
+
+        @keyframes LiSelected {
+            0% {
+                box-shadow: none;
+                color: black;
+                text-shadow: none;
+            }
+
+            100% {
+                box-shadow: 0px 0px 5px rgb(19, 18, 70);
+                color: rgb(29, 27, 175);
+                text-shadow: 3px 3px #ababab;
+            }
+        }
+
+
+        @keyframes LiUnselected {
+            0% {
+                box-shadow: 0px 0px 5px rgb(19, 18, 70);
+                color: rgb(29, 27, 175);
+                text-shadow: 3px 3px #ababab;
+            }
+
+            100% {
+                box-shadow: none;
+                color: black;
+                text-shadow: none;
+            }
+        }
+
+        @keyframes Hide {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes Show {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .obscure-sphere {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: linear-gradient(to right, rgb(77, 74, 243), #f3f3f377);
+            position: absolute;
+            right: -500px;
+            top: 60px;
+        }
+
+        .projects-show-box-content {
+            width: 66%;
+            height: 85%;
+            position: absolute;
+            left: 22%;
+            background-color: #4444440d;
+            display: none;
+            padding-left: 3%;
+            padding-right: 3%;
+            z-index: 60;
+        }
+
+        .goto-box {
+            width: 180px;
+            height: 50px;
+            position: absolute;
+            bottom: 30px;
+            right: 0;
+            z-index: 70;
+        }
+
+        .goto-html-img {
+            width: 85px;
+            height: 100%;
+            background-image: url(./img/gotohtml.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: inline-block;
+            position: relative;
+            z-index: 70;
+            cursor: pointer;
+        }
+
+        .goto-github-img {
+            width: 85px;
+            height: 100%;
+            background-image: url(./img/gotogithub.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: inline-block;
+            margin-left: -23px;
+            position: relative;
+            z-index: 60;
+            cursor: pointer;
+        }
+
+        .projects-show-box-phone {
+            max-width: 1000px;
+            height: auto;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .projects-show-box-phone ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+            grid-gap: 15px 16px;
+            align-content: stretch;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .projects-show-box-phone ul li {
+            width: 300px;
+            height: 525px;
+            position: relative;
+        }
+        .projects-show-box-phone ul li span a{
+            text-decoration:underline;
+            color:#313131
+        }
+        .projects-show-box-phone ul li span a:hover{
+            color:#636363
+        }
+        .projects-show-box-phone ul li div {
+            width: 100%;
+            height: 200px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+
+        .projects-show-box-phone ul li div:hover {
+            cursor: pointer;
+            animation: scaleAnimation 1s forwards;
+        }
+
+        @keyframes scaleAnimation {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.03);
+            }
+        }
+
+        .projects-show-box-phone ul li:nth-child(1) div {
+            background-image: url(./img/webdesign.png);
+        }
+
+        .projects-show-box-phone ul li:nth-child(2) div {
+            background-image: url(./img/rock-paper-scissors.png);
+        }
+
+        .projects-show-box-phone ul li:nth-child(3) div {
+            background-image: url(./img/flatland.png);
+        }
+
+        .projects-show-box-phone ul li:nth-child(4) div {
+            background-image: url(./img/todo.png);
+        }
+
+        .projects-show-box-phone ul li:nth-child(5) div {
+            background-image: url(./img/webdesign2.png);
+        }
+
+        .projects-show-box-phone ul li:nth-child(6) div {
+            background-image: url(./img/rss.png);
+        }
+
+        @keyframes moveandshowcontent {
+            0% {
+                opacity: 0;
+                transform: translateY(800px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes moveandhindcontent {
+            0% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(800px);
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .projects-show-box-computer {
+                display: none;
+            }
+
+            .projects-show-box-phone {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <header>
+        <div class="inner box-margin-center">
+            <a id="universitylogo" href="https://oasis.curtin.edu.au/" target="_blank">
+                <div class="main-logo" title="Curtin University"></div>
+            </a>
+        </div>
+        <nav id="navigation">
+            <div class="nav-inner box-margin-center">
+                <ul>
+                    <li> <a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a  style="color: rgb(77, 74, 243);" href="./projects.html">Projects</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./reflection.html">Reflection</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="contantbox">
+        <div class="inner box-margin-center">
+            <p id="projectsTitle" class="title">Exhibition of works</p>
+            <div class="projects-show-box-computer">
+                <div class="projects-show-title-box fl">
+                    <p class="projects-show-title-box-title">ISYS3004 Course Individual Work Display</p>
+
+                </div>
+                <div id="returnCircle" class="return-arrow-circle not-optional">
+                    <p>&lt;</p>
+                </div>
+                <div id="projectsShowInner" class="projects-show-inner-box not-optional fl">
+                    <div id="projectsShowScrollCtrl" class="projects-show-inner-box-ctrl">
+                        <ul style="position: relative;left: 400px;" id="projectsShowScrollCUl">
+                            <li>
+                                <div class="decorative-strips"></div>
+                                <p>Project 1</p>
+                            </li>
+                            <li>
+                                <div class="decorative-strips"></div>
+                                <p>Project 2</p>
+                            </li>
+                            <li>
+                                <div class="decorative-strips"></div>
+                                <p>Project 3</p>
+                            </li>
+                            <li>
+                                <div class="decorative-strips"></div>
+                                <p>Project 4</p>
+                            </li>
+                            <li>
+                                <div class="decorative-strips"></div>
+                                <p>Project 5</p>
+                            </li>
+                            <li>
+                                <div class="decorative-strips"></div>
+                                <p>Project 6</p>
+                            </li>
+                        </ul>
+                        <ul>
+                        <li style="display: none;cursor: default;" id="spareli"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="projectscontent" class="projects-show-box-content">
+                    <div>
+                        <p id="Project" class="projects-show-box-content-p">Project</p>
+                        <div id="ProjectImg" class="projects-show-box-content-img"></div>
+                        <div class="projects-show-box-content-introduce">
+                            <p style="text-align: center;font-weight: bold;font-size: 20px;">Introduce</p>
+                            <p id="ProjectIntroduce"></p>
+                        </div>
+                        <div class="goto-box">
+                            <div id="gotohtml" class="goto-html-img"></div>
+                            <div id="gotogithub" class="goto-github-img"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="ObscureSphere" class="obscure-sphere">
+
+                </div>
+            </div>
+            <div class="projects-show-box-phone">
+                <ul>
+                    <li>
+                        <a href="https://github.com/GuohongZhang20032766/ISYS3004-1" target="_blank">
+                            <div></div>
+                        </a>
+                        <p>HTML provides the site structure, which is applied to the page display of the site structure,
+                            which requires the use of editors and browsers to apply the knowledge learned, including the
+                            placement of pictures, the position and color of text, and more importantly, the order of
+                            page layout. It is also necessary to carry out real-time website links to some specific URLs
+                            or texts, which is a very important business network technology and the most basic part.</p>
+                        <span style="position: absolute;bottom: 10px;"><a
+                                href="https://harmonious-melomakarona-028e2b.netlify.app/"
+                                target="_blank" style="margin-left: 10px;">HTML</a><a
+                                href="https://github.com/GuohongZhang20032766/ISYS3004-1"
+                                target="_blank" style="margin-left: 180px;">GITHUB</a></span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/GuohongZhang20032766/ISYS3004-2" target="_blank">
+                            <div></div>
+                        </a>
+                        <p>Rock-paper-scissors is a game that uses JavaScript and events to program. In the case of
+                            using HTML websites and CSS for page optimization, using the combination of these three
+                            commercial network technologies, the game of rock-paper-scissors is designed, and uses sound
+                            and text. The form tells the player whether to win or lose.</p>
+                        <span style="position: absolute;bottom: 10px;"><a
+                                href="https://marvelous-queijadas-ed1b02.netlify.app/"
+                                target="_blank" style="margin-left: 10px;">HTML</a><a
+                                href="https://github.com/GuohongZhang20032766/ISYS3004-2"
+                                target="_blank" style="margin-left: 180px;">GITHUB</a></span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/GuohongZhang20032766/ISYS3004-3" target="_blank">
+                            <div></div>
+                        </a>
+                        <p>Flatland is an HTML website written in JavaScript, uses CSS to display different effects and
+                            applies to the DOM. When the user mouses over the square, the color changes. When the user
+                            clicks on the square, there will be different text prompts on the left. This is the web page
+                            for event model programming.</p>
+                        <span style="position: absolute;bottom: 10px;"><a
+                                href="https://sparkling-crisp-da332a.netlify.app/"
+                                target="_blank" style="margin-left: 10px;">HTML</a><a
+                                href="https://github.com/GuohongZhang20032766/ISYS3004-3"
+                                target="_blank" style="margin-left: 180px;">GITHUB</a></span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/GuohongZhang20032766/ISYS3004-4" target="_blank">
+                            <div></div>
+                        </a>
+                        <p>To-Do List is a combination of three principal business web technologies, HTML, CSS, and
+                            JavaScript, which involves the use of the DOM and events. This project is to make a text
+                            input box. When the user edits the events, they need to do and add them to the list, these
+                            items will be displayed on the list. When you complete these items and check them, the items
+                            will be crossed out, and There are three additional button functions, including viewing all
+                            tasks, any given active task, and a list of completed tasks.</p>
+                        <span style="position: absolute;bottom: 10px;"><a
+                                href="https://thunderous-bombolone-adf998.netlify.app/"
+                                target="_blank" style="margin-left: 10px;">HTML</a><a
+                                href="https://github.com/GuohongZhang20032766/ISYS3004-4"
+                                target="_blank" style="margin-left: 180px;">GITHUB</a></span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/GuohongZhang20032766/ISYS3004-5" target="_blank">
+                            <div></div>
+                        </a>
+                        <p>This project is a study of how to use Cascading Style Sheets (CSS) to define the appearance
+                            of a website, further optimized through the HTML learned before, which allows you to specify
+                            the appearance of the site without changing the structure or content, and ensure that the
+                            site conforms to the requirements, CSS and HTML have different functions and display forms
+                            are also different. If HTML is just a simple web design, then CSS is to optimize HTML and
+                            show a better picture.</p>
+                        <span style="position: absolute;bottom: 10px;"><a
+                                href="https://zippy-paprenjak-0a6ec2.netlify.app/"
+                                target="_blank" style="margin-left: 10px;">HTML</a><a
+                                href="https://github.com/GuohongZhang20032766/ISYS3004-5"
+                                target="_blank" style="margin-left: 180px;">GITHUB</a></span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/GuohongZhang20032766/ISYS3004-6" target="_blank">
+                            <div></div>
+                        </a>
+                        <p>RSS is a new data processing technology based on three commercial network technologies and
+                            adding different encoding forms. RSS stands for Really Simple Syndication. It refers to a
+                            computer-readable file called an XML file, which can automatically update information, and
+                            then use JSON to combine user input, and further interact synchronously/asynchronously with
+                            the server to update the web page.</p>
+                        <span style="position: absolute;bottom: 10px;"><a
+                                href="https://superlative-quokka-ceb4fe.netlify.app/"
+                                target="_blank" style="margin-left: 10px;">HTML</a><a
+                                href="https://github.com/GuohongZhang20032766/ISYS3004-6"
+                                target="_blank" style="margin-left: 180px;">GITHUB</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="inner box-margin-center">
+            <div class="inner-left fl">
+                <div class="artwork-information">
+                    <p>zhangguohong364@gmail.com</p>
+                    <p>Last modified: 4/23/2023</p>
+                    <p>This work is licensed under a</p>
+                    <p>Creative Commons Attribtion 4.0 International License</p>
+                </div>
+                <div class="contact">Contact us</div>
+                <div class="contact-link">
+                    <ul>
+                        <li title="Facebook"><a href="https://www.facebook.com/profile.php?id=100046646233996"
+                            target="_blank"></a></li>
+                    <li title="Instrgam"> <a href="https://www.instagram.com/zhangguohong7344/" target="_blank"></a>
+                    </li>
+                    <li title="Tiktok"><a
+                            href="https://www.douyin.com/search/hong14668?publish_time=0&sort_type=0&source=switch_tab&type=general"
+                            target="_blank"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="inner-right fr">
+                <div class="contact-logo">
+                    <ul>
+                        <li title="Curtin University"><a href="https://oasis.curtin.edu.au/" target="_blank"></a></li>
+                        <li title="Github"><a href="https://github.com" target="_blank"></a></li>
+                        <li title="Animate.css"><a href="https://animate.style/" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let spareliLeftCount = 0
+        var spareliLeftCountTemp = 0
+        window.onload = function () {
+            var MovePage = setTimeout(function () {
+                document.getElementById("navigation").scrollIntoView()
+            }, 100)
+
+            var sUl = document.getElementsByTagName("ul")[1];
+            var projectsShowScrollCtrl = document.getElementById("projectsShowScrollCtrl")
+            var sLi = sUl.getElementsByTagName("li");
+            var spareli = document.getElementById("spareli")
+            var projectsShowInner = document.getElementById("projectsShowInner")
+            var projectscontent = document.getElementById("projectscontent")
+            var licount = 0
+            var returnCircle = document.getElementById("returnCircle")
+            var gotohtml = document.getElementById('gotohtml')
+            gotohtml.onclick = GotoHtml
+            var gotogithub = document.getElementById('gotogithub')
+            gotogithub.onclick = GotoGitHub
+            var Project = document.getElementById('Project')
+            var ProjectImg = document.getElementById('ProjectImg')
+            var ProjectIntroduce = document.getElementById('ProjectIntroduce')
+            sUl.innerHTML = sUl.innerHTML
+            // sUl.innerHTML += sUl.innerHTML+= sUl.innerHTML+= sUl.innerHTML+= sUl.innerHTML
+            for (var i = 1; i <= 6; i++) {
+                sLi[i - 1].setAttribute('name', i)
+            }
+            // sUl.style.width = sLi.length * (sLi[0].offsetWidth + 25) + "px";
+            // sUl.style.left = "0px"
+
+            let IsHind = false
+            let itemp = 0
+            for (let i = 0; i < sLi.length; i++) {
+                sLi[i].index = i;
+                sLi[i].onmouseover = function () {
+                    // TitleCarousel(false, IsHind);
+                    sLi[i].style.animation = "LiSelected 1.5s forwards"
+                }
+                sLi[i].onmouseout = function () {
+                    // TitleCarousel(true, IsHind);
+                    sLi[i].style.animation = "LiUnselected 1.5s forwards"
+                }
+                sLi[i].onclick = function () {
+                    sLiname = (sLi[i].getAttribute('name'));
+                    if (sLiname == 1) {
+                        Project.innerText = "Project 1"
+                        ProjectImg.style.backgroundImage = "url(./img/webdesign.png)"
+                        ProjectIntroduce.innerText = "HTML provides the site structure, which is applied to the page display of the site structure, which requires the use of editors and browsers to apply the knowledge learned, including the placement of pictures, the position and color of text, and more importantly, the order of page layout. It is also necessary to carry out real-time website links to some specific URLs or texts, which is a very important business network technology and the most basic part."
+                    }
+                    else if (sLiname == 2) {
+                        Project.innerText = "Project 2"
+                        ProjectImg.style.backgroundImage = "url(./img/rock-paper-scissors.png)"
+                        ProjectIntroduce.innerText = "Rock-paper-scissors is a game that uses JavaScript and events to program. In the case of using HTML websites and CSS for page optimization, using the combination of these three commercial network technologies, the game of rock-paper-scissors is designed, and uses sound and text. The form tells the player whether to win or lose."
+                    }
+                    else if (sLiname == 3) {
+                        Project.innerText = "Project 3"
+                        ProjectImg.style.backgroundImage = "url(./img/flatland.png)"
+                        ProjectIntroduce.innerText = "Flatland is an HTML website written in JavaScript, uses CSS to display different effects and applies to the DOM. When the user mouses over the square, the color changes. When the user clicks on the square, there will be different text prompts on the left. This is the web page for event model programming."
+                    }
+                    else if (sLiname == 4) {
+                        Project.innerText = "Project 4"
+                        ProjectImg.style.backgroundImage = "url(./img/todo.png)"
+                        ProjectIntroduce.innerText = "To-Do List is a combination of three principal business web technologies, HTML, CSS, and JavaScript, which involves the use of the DOM and events. This project is to make a text input box. When the user edits the events, they need to do and add them to the list, these items will be displayed on the list. When you complete these items and check them, the items will be crossed out, and There are three additional button functions, including viewing all tasks, any given active task, and a list of completed tasks."
+                    }
+                    else if (sLiname == 5) {
+                        Project.innerText = "Project 5"
+                        ProjectImg.style.backgroundImage = "url(./img/webdesign2.png)"
+                        ProjectIntroduce.innerText = "This project is a study of how to use Cascading Style Sheets (CSS) to define the appearance of a website, further optimized through the HTML learned before, which allows you to specify the appearance of the site without changing the structure or content, and ensure that the site conforms to the requirements, CSS and HTML have different functions and display forms are also different. If HTML is just a simple web design, then CSS is to optimize HTML and show a better picture."
+                    }
+                    else if (sLiname == 6) {
+                        Project.innerText = "Project 6"
+                        ProjectImg.style.backgroundImage = "url(./img/rss.png)"
+                        ProjectIntroduce.innerText = "RSS is a new data processing technology based on three commercial network technologies and adding different encoding forms. RSS stands for Really Simple Syndication. It refers to a computer-readable file called an XML file, which can automatically update information, and then use JSON to combine user input, and further interact synchronously/asynchronously with the server to update the web page."
+                    }
+                    IsHind = true
+                    // TitleCarousel(false, IsHind);
+                    if (i != 5) {
+                        sLi[i + 1].style.marginLeft = "149px"
+                    }
+
+                    itemp = i + 1
+                    for (let s = 0; s < sLi.length; s++) {
+                        if (sLi[s] == sLi[i]) {
+                            if (spareli.innerHTML == "") {
+                                spareli.innerHTML += sLi[s].innerHTML
+                            }
+                            sLi[s].style.position = "absolute"
+                            sLi[s].style.left = (s) * (sLi[s].offsetWidth + 21) + "px";
+                            spareli.style.position = "absolute"
+                            spareli.style.left = (sLi[s].getBoundingClientRect().left + 62) + "px"
+
+                            licount = licount + 1
+                            setTimeout(function () {
+                                projectsShowInner.style.zIndex = "51"
+                                sLi[s].style.display = "none"
+                                sUl.style.display = "none"
+                                MoveTitleCtrl(true)
+                            }, 1500);
+                        }
+                        else {
+                            sLi[s].style.animation = "Hide 1s forwards"
+                            setTimeout(function () {
+                                sLi[s].style.display = "none"
+                            }, 1000);
+                            setTimeout(function () {
+                                spareli.style.display = "block"
+                            }, 1500);
+
+                        }
+                    }
+
+
+                }
+            }
+            function GotoHtml() {
+                if (Project.innerText == "Project 1") {
+                    window.location.href = "https://harmonious-melomakarona-028e2b.netlify.app/"
+                }
+                else if (Project.innerText == "Project 2") {
+                    window.location.href = "https://marvelous-queijadas-ed1b02.netlify.app/"
+                }
+                else if (Project.innerText == "Project 3") {
+                    window.location.href = "https://sparkling-crisp-da332a.netlify.app/"
+                }
+                else if (Project.innerText == "Project 4") {
+                    window.location.href = "https://thunderous-bombolone-adf998.netlify.app/"
+                }
+                else if (Project.innerText == "Project 5") {
+                    window.location.href = "https://zippy-paprenjak-0a6ec2.netlify.app/"
+                }
+                else if (Project.innerText == "Project 6") {
+                    window.location.href = "https://superlative-quokka-ceb4fe.netlify.app/"
+                }
+            }
+            function GotoGitHub() {
+                if (Project.innerText == "Project 1") {
+                    window.location.href = "https://github.com/GuohongZhang20032766/ISYS3004-1"
+                }
+                else if (Project.innerText == "Project 2") {
+                    window.location.href = "https://github.com/GuohongZhang20032766/ISYS3004-2"
+                }
+                else if (Project.innerText == "Project 3") {
+                    window.location.href = "https://github.com/GuohongZhang20032766/ISYS3004-3"
+                }
+                else if (Project.innerText == "Project 4") {
+                    window.location.href = "https://github.com/GuohongZhang20032766/ISYS3004-4"
+                }
+                else if (Project.innerText == "Project 5") {
+                    window.location.href = "https://github.com/GuohongZhang20032766/ISYS3004-5"
+                }
+                else if (Project.innerText == "Project 6") {
+                    window.location.href = "https://github.com/GuohongZhang20032766/ISYS3004-6"
+                }
+            }
+
+            // function ScrollProject() {
+            //     var leftpx = getComputedStyle(sUl).getPropertyValue('left')
+            //     leftpx = (parseInt(leftpx.split("px")[0]) - 1)
+            //     if (leftpx == -1550) {
+            //         sUl.style.left = "-0px"
+            //     }
+            //     else {
+            //         sUl.style.left = leftpx + "px"
+            //     }
+            // }
+            // function TitleCarousel(e, IsHind) {
+            //     if (e == true && IsHind == false) {
+            //         timer = setInterval(ScrollProject, 30)
+            //     }
+            //     else if (e == false || IsHind == true) {
+            //         clearInterval(timer);
+            //     }
+            // }
+            // timer = setInterval(ScrollProject, 30)
+            // Move the sphere
+            var ObscureSphere = document.getElementById("ObscureSphere")
+
+            function ObscureSphereMove() {
+                var rightpx = getComputedStyle(ObscureSphere).getPropertyValue('right')
+                rightpx = (parseInt(rightpx.split("px")[0]) + 5)
+                if (rightpx < 3000) {
+                    ObscureSphere.style.right = rightpx + "px"
+                }
+                else {
+                    ObscureSphere.style.right = "-500px"
+                    ClickObscureSphereMove(false);
+                }
+            }
+            function ClickObscureSphereMove(e) {
+                if (e == false) {
+                    clearInterval(timerSphere)
+                }
+                else if (e == true) {
+                    timerSphere = setInterval(ObscureSphereMove, 1)
+                }
+            }
+
+            function MoveTitle() {
+                var spareli = document.getElementById("spareli")
+                var spareliLeft = getComputedStyle(spareli).getPropertyValue('left')
+                spareliLeft = (parseInt(spareliLeft.split("px")[0]))
+                if (spareliLeft > 270) {
+                    spareliLeft = spareliLeft - 1
+                    spareli.style.left = spareliLeft + "px"
+                    spareliLeftCount = spareliLeftCount + 1
+                }
+                else if (spareliLeft < 270) {
+                    spareliLeft = spareliLeft + 1
+                    spareli.style.left = spareliLeft + "px"
+                    spareliLeftCount = spareliLeftCount - 1
+                }
+                else if (spareliLeft == 270) {
+                    MoveTitleCtrl(false);
+                }
+            }
+
+            function MoveTitleCtrl(e) {
+                if (e == false) {
+                    clearInterval(timerTitle)
+                }
+                else if (e == true) {
+                    returnCircle.style.display = "block"
+                    returnCircle.style.animation = "Show 1.5s forwards"
+                    projectscontent.style.display = "block"
+                    projectscontent.style.animation = "moveandshowcontent 2s forwards"
+                    timerTitle = setInterval(MoveTitle, 0.01)
+                }
+            }
+
+            returnCircle.onclick = GoBack
+            function GoBack() {
+                returnCircle.style.animation = "Hide 1.5s forwards"
+                BackTitleCtrl(true)
+            }
+            function UlLiShow() {
+                var sUl = document.getElementsByTagName("ul")[1];
+                var sLi = sUl.getElementsByTagName("li");
+
+                sUl.style.display = "block"
+                IsHind = false
+
+
+                for (let f = 0; f < sLi.length; f++) {
+                    if (itemp != 6) {
+                        sLi[itemp].style.marginLeft = "20px"
+                    }
+                    sLi[f].style.animation = "LiUnselected 1s forwards"
+                    sLi[f].style.display = "block"
+                    sLi[f].style.position = "relative"
+                    sLi[f].style.left = "0"
+                    spareli.innerHTML = ""
+                    spareli.style.display = "none"
+                    projectsShowInner.style.zIndex = "-1"
+                    projectscontent.style.display = "block"
+                }
+                // TitleCarousel(true, IsHind);
+            }
+            function BackTitle() {
+                var spareli = document.getElementById("spareli")
+                var spareliLeft = getComputedStyle(spareli).getPropertyValue('left')
+                spareliLeft = (parseInt(spareliLeft.split("px")[0]))
+
+                returnCircle.style.display = "none"
+                projectscontent.style.animation = "moveandhindcontent 2s forwards"
+                if (spareliLeftCount >= 0) {
+                    spareliLeft = spareliLeft + 1
+                    spareli.style.left = spareliLeft + "px"
+                    spareliLeftCountTemp = spareliLeftCountTemp + 1
+                    if (spareliLeftCountTemp == spareliLeftCount + 14) {
+                        BackTitleCtrl(false)
+                        UlLiShow()
+
+                    }
+                }
+                else if (spareliLeftCount < 0) {
+                    spareliLeft = spareliLeft - 1
+                    spareli.style.left = spareliLeft + "px"
+                    spareliLeftCountTemp = spareliLeftCountTemp - 1
+                    if (spareliLeftCountTemp == spareliLeftCount) {
+                        BackTitleCtrl(false)
+                        UlLiShow()
+
+                    }
+                }
+            }
+
+            function BackTitleCtrl(e) {
+                if (e == false) {
+                    clearInterval(timerBackTitle)
+                }
+                else if (e == true) {
+                    timerBackTitle = setInterval(BackTitle, 0.01)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

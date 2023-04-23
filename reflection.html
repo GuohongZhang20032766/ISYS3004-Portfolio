@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teaches basic but critical skills for web design">
+    <meta name="keywords" content="web technologies, web design, web skills">
+    <meta name="author" content="Iam Guohong Zhang">
+    <title>ISYS3004 | Contact</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./css/animate.css" rel="stylesheet" type="text/css">
+    <script src="./js/main.js"></script>
+    <style>
+        .contentbox {
+            width: 100%;
+            height: auto;
+        }
+
+        .contentbox .inner {
+            max-width: 1200px;
+            height: auto;
+        }
+
+        .inner-content-box {
+            width: 74%;
+            height: auto;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            padding: 3%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-left: 3px solid rgb(77, 74, 243);
+            box-shadow: 1px 1px 10px #858585;
+            font-size: 17px;
+        }
+
+        .inner-content-box:first-child {
+            margin-top: 50px;
+        }
+
+        .inner-content-box:last-child {
+            margin-bottom: 50px;
+        }
+
+        .inner-content-box:hover {
+            cursor: pointer;
+            animation: scaleAnimation 1s forwards;
+
+        }
+
+        @keyframes scaleAnimation {
+            0% {
+                transform: scale(1);
+                box-shadow: 1px 1px 10px #858585;
+            }
+
+            100% {
+                transform: scale(1.03);
+                box-shadow: 1px 1px 15px #858585;
+            }
+        }
+
+        .contact-backgrond-img {
+            width: 100%;
+            height: 50vw;
+            background-image: url(./img/rethink-bg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .pull-down-box {
+            width: 100%;
+            height: 5vw;
+            position: absolute;
+            bottom: 3vw;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            animation: move 1.5s infinite;
+        }
+
+        .pull-down-p {
+            line-height: 0vw;
+            font-size: 1.2vw;
+            font-weight: bold;
+            color: rgb(255 255 255 / 61%);
+            margin-top: 0px;
+            cursor: default;
+        }
+
+        .arrowhead {
+            width: 6vw;
+            height: 4vw;
+            background-image: url(./img//Sprite-diagram.png);
+            background-repeat: no-repeat;
+            background-size: 460% 492%;
+            background-position-x: -5.5vw;
+            background-position-y: -12.5vw;
+            margin: 0 auto;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0.5vw);
+            }
+
+            75% {
+                transform: translateY(0vw);
+            }
+
+            100% {
+                transform: translateY(0.5vw);
+            }
+        }
+
+        @media only screen and (max-width: 750px) {
+            .contact-backgrond-img {
+                height: 110vw;
+            }
+
+            .pull-down-box {
+                bottom: 10vw !important;
+            }
+
+            .arrowhead {
+                width: 13vw !important;
+                height: 7vw !important;
+                background-size: 477% 532% !important;
+                background-position-x: -12vw !important;
+                background-position-y: -23.5vw !important;
+            }
+
+            .pull-down-p {
+                font-size: 2.2vw !important;
+                margin-top: 6px !important;
+            }
+
+            .title-contact-box p {
+                font-size: 7vw !important;
+                line-height: 40vw !important;
+            }
+        }
+
+        .title-contact-box p {
+            margin-left: -0.1vw;
+            color: rgb(255 255 255 / 61%);
+            text-align: center;
+            font-size: 5vw;
+            font-weight: bolder;
+            line-height: 18vw;
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <div class="contact-backgrond-img">
+        <header style="background-color: rgba(255,255,255,0.3);box-shadow: none;">
+            <div class="inner box-margin-center">
+                <a id="universitylogo" href="https://oasis.curtin.edu.au/" target="_blank">
+                    <div class="main-logo" title="Curtin University"></div>
+                </a>
+            </div>
+            <nav id="navigation">
+                <div class="nav-inner box-margin-center">
+                    <ul>
+                        <li> <a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a style="color: rgb(77, 74, 243);" href="./reflection.html">Reflection</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="title-contact-box not-optional">
+            <p class="animate__rubberBand">REFLECTION</p>
+        </div>
+        <div class="pull-down-box not-optional">
+            <div class="arrowhead"></div>
+            <p class="pull-down-p">Pull Down</p>
+        </div>
+    </div>
+    <div class="contentbox">
+        <div class="inner box-margin-center">
+            <div class="inner-content-box">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;In the process of making this website, I encountered many problems. First of all,
+                    I only considered the format of the web template when I started making this netizen page but ignored
+                    the applicability of the template on the mobile phone. This problem caused me to complete the
+                    design. After the web page template needs to be redesigned for the mobile phone, because I ignored
+                    this problem, I need to spend more time and energy to complete it. It also makes me understand that
+                    I need to make sufficient preparations in advance when designing a website. I encountered many
+                    difficulties in the process. I used chapGPT or Google to search for answers to the problems, but
+                    when they were used in practice, the expected results could not be achieved.</p>
+            </div>
+            <div class="inner-content-box">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Design and Layout: Creating an attractive and pleasing-looking design for my
+                    website can be a challenge. In order to overcome this problem, I first researched other personal
+                    websites and collected inspiration for my own website. I prefer landscapes, so most of the pictures
+                    and designs are related to landscapes. After sorting and combining the collected inspirations, I
+                    finally get a relatively Satisfactory effect.</p>
+            </div>
+            <div class="inner-content-box">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Content Creation: It can be challenging to develop high-quality content that
+                    accurately represents my skills and achievements and showcases my personal abilities. It starts with
+                    identifying my unique selling points, including my work history, hobbies, and accomplishments, and
+                    crafting a compelling story that highlights my strengths. But the simple and elegant design is my
+                    personal style. By referring to other excellent personal websites and searching for some content
+                    creation tutorials, through continuous modification and improvement, I finally achieved the desired
+                    effect.</p>
+            </div>
+            <div class="inner-content-box">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Technical skills: Building a website requires technical skills such as HTML, CSS,
+                    and JavaScript. I am not familiar with or understand many professional codes, which poses a new
+                    challenge for me. By constantly replaying the teacher's lectures, searching professional websites,
+                    and even consulting some experienced people in this field, continuous exploration and research,
+                    finally achieve the desired effect.</p>
+            </div>
+            <div class="inner-content-box">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Network optimization: After the website is roughly completed, it may be a new
+                    challenge to optimize it, which is a big challenge for my personal aesthetics and personal skills,
+                    including font size, color, and the placement and order of pictures , need to be constantly
+                    modified, I also need to optimize the picture and shorten the page loading time, in order to
+                    overcome this challenge, I studied a lot of professional websites, modify the code to achieve the
+                    effect I want.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="inner box-margin-center">
+            <div class="inner-left fl">
+                <div class="artwork-information">
+                    <p>zhangguohong364@gmail.com</p>
+                    <p>Last modified: 4/23/2023</p>
+                    <p>This work is licensed under a</p>
+                    <p>Creative Commons Attribtion 4.0 International License</p>
+                </div>
+                <div class="contact">Contact us</div>
+                <div class="contact-link">
+                    <ul>
+                        <li title="Facebook"><a href="https://www.facebook.com/profile.php?id=100046646233996"
+                            target="_blank"></a></li>
+                    <li title="Instrgam"> <a href="https://www.instagram.com/zhangguohong7344/" target="_blank"></a>
+                    </li>
+                    <li title="Tiktok"><a
+                            href="https://www.douyin.com/search/hong14668?publish_time=0&sort_type=0&source=switch_tab&type=general"
+                            target="_blank"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="inner-right fr">
+                <div class="contact-logo">
+                    <ul>
+                        <li title="Curtin University"><a href="https://oasis.curtin.edu.au/" target="_blank"></a></li>
+                        <li title="Github"><a href="https://github.com" target="_blank"></a></li>
+                        <li title="Animate.css"><a href="https://animate.style/" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
